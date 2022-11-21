@@ -1,16 +1,21 @@
-const alejandro = {
-    nombre: "Alejandro",
-    edad: 41,
-    isDesarrollador: true,
-    nacimiento: new Date("february 9 1981"),
-    "libro-favorito": {
-        titulo: "El principito",
-        autor: "Exupery",
-        fecha: "01/01/70",
-        url: "www.url.com"
-    }
+const winston = require('winston');// Forma de importar el modulos (modulos)
+
+const logger = winston.createLogger({
+  level: 'error',
+  format: winston.format.json(),
+  transports: [
+    new winston.transports.File({ filename: 'error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'combined.log' }),
+  ],
+});
+
+function errorPersonalizado(){
+    try {
+        resultado = 1 + a;
+        console.log(resultado);
+    } catch(e) {
+        logger.error(`Este es un mensaje de error personalizado. El error es ${e.error}`);     
+    }        
 }
 
-console.log(alejandro.nombre, alejandro.edad, alejandro.isDesarrollador,
-    alejandro.nacimiento, alejandro["libro-favorito"].titulo, alejandro["libro-favorito"].autor, 
-    alejandro["libro-favorito"].fecha, alejandro["libro-favorito"].url);
+errorPersonalizado();
