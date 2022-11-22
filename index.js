@@ -1,21 +1,8 @@
-const winston = require('winston');// Forma de importar el modulos (modulos)
+import * as moduloController from './controller.js';
+import chalk from 'chalk';
 
-const logger = winston.createLogger({
-  level: 'error',
-  format: winston.format.json(),
-  transports: [
-    new winston.transports.File({ filename: 'error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'combined.log' }),
-  ],
-});
+const sumar = moduloController.suma(1, 2);
+const sumar2 = moduloController.suma(4, 5);
 
-function errorPersonalizado(){
-    try {
-        resultado = 1 + a;
-        console.log(resultado);
-    } catch(e) {
-        logger.error(`Este es un mensaje de error personalizado. El error es ${e.error}`);     
-    }        
-}
-
-errorPersonalizado();
+console.log(chalk.green(sumar));
+console.log(chalk.green(sumar2));
