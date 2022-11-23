@@ -1,8 +1,16 @@
-import * as moduloController from './controller.js';
-import chalk from 'chalk';
+class Estudiante {
+    nombre = "Alejandro";
+    asignaturas = ["Javascript", "HTML", "CSS"];
+    
+    obtenDatos(){
+        const objeto = {
+            nombre: this.nombre,
+            asignaturas: this.asignaturas
+        }
+        return objeto;
+    }
+}
 
-const sumar = moduloController.suma(1, 2);
-const sumar2 = moduloController.suma(4, 5);
+const nuevoEstudiante = new Estudiante();
+console.log(nuevoEstudiante.obtenDatos());
 
-console.log(chalk.green(sumar));
-console.log(chalk.green(sumar2));
