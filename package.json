@@ -1,16 +1,16 @@
 {
-  "name": "openbootcamp-cursos15-leccion1886",
+  "name": "openbootcamp-cursos15-leccion1890",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "chalk": "^5.1.2"
+  "devDependencies": {
+    "eslint": "^8.28.0"
   }
 }
