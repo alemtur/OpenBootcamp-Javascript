@@ -1,12 +1,14 @@
 {
-  "name": "openbootcamp-cursos15-leccion1891",
+  "name": "leccion1892",
   "version": "1.0.0",
-  "description": "",
+  "description": "leccion1892",
   "main": "index.js",
   "scripts": {
-    "start": "http-server ."
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "leccion1892"
+  ],
+  "author": "Alejandro",
   "license": "ISC"
 }

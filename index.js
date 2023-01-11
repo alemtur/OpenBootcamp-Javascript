@@ -1,11 +1,13 @@
-const boton1 = document.getElementById("btn1")
+var nombre = "Alejandro"
+var apellido = "Turtola"
 
-boton1.addEventListener("click", () => {
-    alert("Hola, NO estoy utilizando jQuery")
-})
+var yo = {
+    nombre: `${nombre}`,
+    apellido: `${apellido}`
+} 
 
-const boton2 = document.querySelector("#btn2")
+sessionStorage.setItem("yo", JSON.stringify(yo))
+localStorage.setItem("yo", JSON.stringify(yo))
 
-boton2.addEventListener("click", () => {
-    alert("Hola, estoy utilizando jQuery")
-})
+document.cookie = `${JSON.stringify(yo)} ;expires=` + new Date(2023, 0, 11, 00, 00, 02)
+
